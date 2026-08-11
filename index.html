@@ -3,9 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>XoXo BD - Free Fire Diamond TopUp</title>
 
 <style>
+
+/* =========================
+   BASIC
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -17,25 +23,34 @@ html{
 }
 
 body{
-    background:#f1f6ff;
+    background:#f2f6ff;
     color:#17385f;
     font-family:Arial,sans-serif;
     padding-bottom:95px;
 }
 
-/* ================= HEADER ================= */
+
+/* =========================
+   HEADER
+========================= */
 
 .header{
     height:100px;
-    background:#fff;
+    background:#ffffff;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 30px;
+
+    padding:0 28px;
+
     border-bottom:1px solid #ddd;
+
     box-shadow:0 2px 8px rgba(0,0,0,.08);
+
     position:sticky;
     top:0;
+
     z-index:100;
 }
 
@@ -43,94 +58,117 @@ body{
     display:flex;
     align-items:center;
     gap:7px;
-    color:#000;
 }
 
 .logo-mark{
-    font-size:48px;
+    font-size:46px;
     font-weight:900;
     color:#6515dc;
     line-height:1;
 }
 
 .logo-name{
-    font-size:31px;
+    font-size:30px;
     font-weight:900;
-    letter-spacing:-1px;
+    color:#111;
 }
 
 .logo-name span{
     display:block;
-    font-size:11px;
-    letter-spacing:2px;
     color:#555;
+    font-size:10px;
+    letter-spacing:2px;
     margin-top:5px;
 }
 
 .login{
     background:#6735c5;
-    color:white;
+    color:#fff;
+
     border:0;
     border-radius:7px;
-    padding:16px 28px;
-    font-size:18px;
+
+    padding:15px 27px;
+
+    font-size:17px;
     font-weight:bold;
 }
 
-/* ================= NOTICE ================= */
+
+/* =========================
+   NOTICE
+========================= */
 
 .notice{
     margin:0 15px;
-    margin-top:0;
+
     background:#6735c5;
-    color:white;
-    padding:15px;
+    color:#fff;
+
+    padding:16px;
+
     position:relative;
 }
 
 .notice-title{
     font-family:Georgia,serif;
-    font-size:28px;
-    margin-bottom:8px;
+    font-size:27px;
+    margin-bottom:7px;
 }
 
 .notice-text{
     font-family:Georgia,serif;
-    font-size:18px;
+    font-size:17px;
     line-height:1.5;
-    padding-right:25px;
+
+    padding-right:30px;
 }
 
 .close{
     position:absolute;
+
     right:15px;
     top:14px;
+
     width:34px;
     height:34px;
+
     border:3px solid white;
     border-radius:50%;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     font-size:22px;
     font-weight:bold;
 }
 
-/* ================= SLIDER ================= */
+
+/* =========================
+   SLIDER
+========================= */
 
 .slider{
     margin:15px;
-    height:310px;
+
+    height:300px;
+
     overflow:hidden;
+
     position:relative;
-    border-radius:2px;
+
+    border-radius:4px;
 }
 
 .slide{
     width:100%;
     height:100%;
+
     display:none;
+
     position:relative;
+
     overflow:hidden;
 }
 
@@ -140,35 +178,56 @@ body{
 
 .slide.one{
     background:
-    radial-gradient(circle at 25% 45%,#6c00ff 0,#30006d 45%,#120027 100%);
+    radial-gradient(
+        circle at 25% 45%,
+        #7100ff 0,
+        #350074 45%,
+        #120027 100%
+    );
 }
 
 .slide.two{
     background:
-    linear-gradient(100deg,#300060,#7200e9 55%,#ff1829);
+    linear-gradient(
+        100deg,
+        #300060,
+        #7200e9 55%,
+        #ff1829
+    );
 }
 
 .slide.three{
     background:
-    linear-gradient(110deg,#17003d,#5f00b9,#16002e);
+    linear-gradient(
+        110deg,
+        #17003d,
+        #5f00b9,
+        #16002e
+    );
 }
 
 .slide-content{
-    padding:42px;
-    color:white;
+    padding:40px 30px;
+
+    color:#fff;
+
     position:relative;
+
     z-index:3;
 }
 
 .slide-small{
-    font-size:22px;
+    font-size:20px;
     font-weight:900;
 }
 
 .slide h1{
     font-family:Georgia,serif;
-    font-size:42px;
+
+    font-size:40px;
+
     line-height:1.08;
+
     margin:10px 0;
 }
 
@@ -178,306 +237,439 @@ body{
 
 .slide p{
     font-family:Georgia,serif;
-    font-size:18px;
+
+    font-size:17px;
 }
 
 .diamond{
     position:absolute;
-    right:50px;
+
+    right:45px;
     top:65px;
-    font-size:125px;
-    filter:drop-shadow(0 0 30px #50dfff);
+
+    font-size:120px;
+
+    filter:drop-shadow(
+        0 0 30px #50dfff
+    );
 }
 
-/* slider dots */
+
+/* =========================
+   SLIDER DOTS
+========================= */
 
 .slider-dots{
     display:flex;
+
     justify-content:center;
-    gap:12px;
-    margin:18px 0 28px;
+
+    gap:10px;
+
+    margin:17px 0 28px;
 }
 
 .dot{
     width:22px;
     height:7px;
+
     background:#8b8b8b;
+
+    border-radius:5px;
 }
 
 .dot.active{
     background:#111;
 }
 
-/* ================= SUPPORT ================= */
+
+/* =========================
+   SUPPORT
+========================= */
 
 .support{
     display:flex;
-    gap:15px;
+
+    gap:14px;
+
     padding:0 15px;
 }
 
 .support-btn{
-    width:220px;
-    height:75px;
-    background:linear-gradient(135deg,#6b36c8,#7543ce);
-    color:white;
+    flex:1;
+
+    height:72px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #6b36c8,
+        #7543ce
+    );
+
+    color:#fff;
+
     border-radius:9px;
+
     display:flex;
+
     align-items:center;
-    padding:10px 15px;
-    box-shadow:0 4px 8px rgba(0,0,0,.15);
+
+    padding:10px 13px;
+
+    box-shadow:
+    0 4px 8px rgba(0,0,0,.15);
 }
 
 .support-icon{
-    width:47px;
-    height:47px;
-    background:white;
+    width:46px;
+    height:46px;
+
+    background:#fff;
+
     color:#6735c5;
+
     border-radius:50%;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
-    font-size:24px;
-    margin-right:12px;
+
+    font-size:23px;
+
+    margin-right:10px;
 }
 
 .support-text small{
     display:block;
-    font-size:12px;
+
+    font-size:11px;
+
     letter-spacing:1px;
+
     opacity:.9;
 }
 
 .support-text strong{
     display:block;
-    font-size:17px;
+
+    font-size:16px;
+
     margin-top:3px;
 }
 
-/* ================= SECTION TITLE ================= */
+
+/* =========================
+   SECTION TITLE
+========================= */
 
 .section-title{
     text-align:center;
+
     font-family:Georgia,serif;
-    font-size:39px;
+
+    font-size:36px;
+
     color:#17385f;
-    margin:50px 0 30px;
+
+    margin:48px 0 28px;
 }
 
-/* ================= SPECIAL OFFER ================= */
+
+/* =========================
+   SPECIAL OFFER
+========================= */
 
 .special{
     padding:0 28px;
 }
 
 .special-card{
-    width:185px;
+    width:180px;
 }
 
 .special-img{
-    width:185px;
-    height:180px;
+    width:180px;
+    height:125px;
+
     border-radius:10px;
+
     overflow:hidden;
+
     background:
-    linear-gradient(135deg,#210044,#8500ff);
+    linear-gradient(
+        135deg,
+        #210044,
+        #8500ff
+    );
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     position:relative;
-    box-shadow:0 3px 10px rgba(0,0,0,.18);
+
+    box-shadow:
+    0 3px 10px rgba(0,0,0,.18);
 }
 
 .special-img:before{
     content:"💎";
-    font-size:70px;
-    filter:drop-shadow(0 0 18px #62eaff);
+
+    font-size:65px;
+
+    filter:
+    drop-shadow(
+        0 0 18px #62eaff
+    );
 }
 
 .special-img:after{
-    content:"WEEKLY";
+    content:"SPECIAL";
+
     position:absolute;
-    left:12px;
-    top:15px;
-    color:white;
-    font-size:15px;
+
+    top:10px;
+    left:10px;
+
+    color:#fff;
+
+    font-size:13px;
+
     font-weight:bold;
 }
 
 .special-name{
     font-family:Georgia,serif;
-    font-size:18px;
+
+    font-size:17px;
+
     font-weight:bold;
-    margin-top:12px;
+
+    margin-top:11px;
+
     color:#17385f;
 }
 
-/* ================= TOPUP ================= */
+
+/* =========================
+   TOPUP GRID
+========================= */
 
 .topup-grid{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:35px 28px;
-    padding:0 28px;
+
+    grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
+    gap:32px 14px;
+
+    padding:
+    0 22px;
 }
+
+
+/* EVERY CARD SAME SIZE */
 
 .topup-item{
-    cursor:pointer;
+
+    width:100%;
+
+    min-width:0;
+
     text-align:center;
+
+    cursor:pointer;
 }
 
+
+/* SAME IMAGE SIZE */
+
 .topup-image{
+
     width:100%;
-    aspect-ratio:1/1;
-    border-radius:9px;
+
+    height:120px;
+
+    border-radius:10px;
+
     overflow:hidden;
+
     background:
-    radial-gradient(circle at center,#7d22ff 0,#35005f 55%,#18002f 100%);
+    radial-gradient(
+        circle at center,
+        #8127ff 0,
+        #400071 55%,
+        #19002f 100%
+    );
+
     border:2px solid #fff;
-    box-shadow:0 4px 10px rgba(0,0,0,.17);
+
+    box-shadow:
+    0 4px 10px rgba(0,0,0,.17);
+
     position:relative;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 }
 
+
+/* PURPLE GLOW */
+
 .topup-image:before{
+
     content:"";
-    width:110px;
-    height:110px;
-    border-radius:50%;
-    background:#8e32ff;
-    filter:blur(28px);
+
     position:absolute;
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    background:#963cff;
+
+    filter:blur(28px);
 }
+
+
+/* SAME ICON AREA */
 
 .topup-icon{
-    font-size:65px;
+
+    width:70px;
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:48px;
+
     position:relative;
+
     z-index:2;
-    filter:drop-shadow(0 0 15px #5ee9ff);
+
+    filter:
+    drop-shadow(
+        0 0 15px #5ee9ff
+    );
 }
 
+
+/* SAME TEXT AREA */
+
 .topup-item h3{
+
+    width:100%;
+
+    min-height:38px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     font-family:Georgia,serif;
-    font-size:17px;
-    margin-top:13px;
+
+    font-size:13px;
+
+    line-height:1.2;
+
+    margin-top:9px;
+
     color:#17385f;
 }
 
-/* ================= BOTTOM NAV ================= */
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
 
 .bottom-nav{
+
     position:fixed;
+
     left:0;
     right:0;
     bottom:0;
-    height:82px;
-    background:white;
-    border-radius:25px 25px 0 0;
-    box-shadow:0 -3px 15px rgba(0,0,0,.15);
+
+    height:80px;
+
+    background:#fff;
+
+    border-radius:
+    24px 24px 0 0;
+
+    box-shadow:
+    0 -3px 15px rgba(0,0,0,.15);
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     z-index:200;
 }
 
 .nav{
+
     text-align:center;
-    padding-top:10px;
+
+    padding-top:9px;
+
     color:#626b79;
-    font-size:15px;
+
+    font-size:14px;
+
     font-weight:bold;
 }
 
 .nav-icon{
+
     display:block;
-    font-size:29px;
-    height:35px;
-    line-height:32px;
+
+    font-size:28px;
+
+    height:34px;
+
+    line-height:30px;
 }
 
 .nav.active{
+
     color:#6735c5;
 }
 
-/* ================= RESPONSIVE ================= */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:600px){
 
     .header{
-        height:100px;
-        padding:0 28px;
+        height:92px;
+
+        padding:
+        0 20px;
     }
 
     .logo-mark{
-        font-size:42px;
+        font-size:40px;
     }
 
     .logo-name{
-        font-size:28px;
-    }
-
-    .login{
-        padding:15px 25px;
-    }
-
-    .notice{
-        margin:0 15px;
-    }
-
-    .slider{
-        height:310px;
-    }
-
-    .slide-content{
-        padding:35px 25px;
-    }
-
-    .slide h1{
-        font-size:34px;
-    }
-
-    .diamond{
-        right:20px;
-        top:105px;
-        font-size:90px;
-    }
-
-    .support-btn{
-        width:calc(50% - 7px);
-    }
-
-    .support{
-        padding:0 15px;
-    }
-
-    .section-title{
-        font-size:34px;
-    }
-
-    .topup-grid{
-        grid-template-columns:repeat(3,1fr);
-        gap:35px 14px;
-        padding:0 27px;
-    }
-
-    .topup-item h3{
-        font-size:13px;
-    }
-
-    .topup-icon{
-        font-size:48px;
-    }
-}
-
-@media(max-width:390px){
-
-    .header{
-        padding:0 18px;
-    }
-
-    .logo-name{
-        font-size:25px;
+        font-size:26px;
     }
 
     .logo-name span{
@@ -485,15 +677,25 @@ body{
     }
 
     .login{
-        padding:13px 20px;
+        padding:
+        13px 22px;
     }
 
     .slider{
-        height:260px;
+        height:275px;
+    }
+
+    .slide-content{
+        padding:
+        35px 23px;
+    }
+
+    .slide-small{
+        font-size:18px;
     }
 
     .slide h1{
-        font-size:29px;
+        font-size:31px;
     }
 
     .slide p{
@@ -501,58 +703,196 @@ body{
     }
 
     .diamond{
-        font-size:70px;
+        right:18px;
+        top:95px;
+
+        font-size:75px;
+    }
+
+    .support{
+        gap:10px;
+    }
+
+    .support-btn{
+        height:70px;
+
+        padding:
+        9px;
+    }
+
+    .support-icon{
+        width:42px;
+        height:42px;
+
+        font-size:21px;
+
+        margin-right:7px;
+    }
+
+    .support-text strong{
+        font-size:14px;
+    }
+
+    .section-title{
+        font-size:32px;
+
+        margin:
+        42px 0 25px;
     }
 
     .topup-grid{
-        padding:0 20px;
-        gap:30px 10px;
+
+        grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+        gap:
+        30px 10px;
+
+        padding:
+        0 20px;
+    }
+
+    .topup-image{
+
+        width:100%;
+
+        height:110px;
+
+        border-radius:9px;
+    }
+
+    .topup-icon{
+
+        width:60px;
+        height:60px;
+
+        font-size:43px;
     }
 
     .topup-item h3{
+
+        min-height:36px;
+
         font-size:11px;
+
+        margin-top:8px;
     }
 }
+
+
+/* EXTRA SMALL IPHONE */
+
+@media(max-width:380px){
+
+    .header{
+        padding:0 15px;
+    }
+
+    .logo-name{
+        font-size:23px;
+    }
+
+    .login{
+        padding:
+        12px 18px;
+    }
+
+    .topup-grid{
+
+        padding:
+        0 16px;
+
+        gap:
+        27px 8px;
+    }
+
+    .topup-image{
+
+        height:100px;
+    }
+
+    .topup-icon{
+        font-size:38px;
+    }
+
+    .topup-item h3{
+        font-size:10px;
+    }
+}
+
 </style>
 </head>
 
+
 <body>
 
-<!-- HEADER -->
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header class="header">
 
     <div class="logo">
-        <div class="logo-mark">✕</div>
+
+        <div class="logo-mark">
+            ✕
+        </div>
 
         <div class="logo-name">
+
             XoXo BD
-            <span>FREE FIRE DIAMOND TOPUP</span>
+
+            <span>
+                FREE FIRE DIAMOND TOPUP
+            </span>
+
         </div>
+
     </div>
 
-    <button class="login">Login</button>
+
+    <button class="login">
+        Login
+    </button>
 
 </header>
 
 
-<!-- NOTICE -->
+
+<!-- =========================
+     NOTICE
+========================= -->
+
 <section class="notice">
 
-    <div class="close">×</div>
+    <div class="close">
+        ×
+    </div>
 
-    <div class="notice-title">Notice:</div>
+    <div class="notice-title">
+        Notice:
+    </div>
 
     <div class="notice-text">
-        ১৮ বছরের নিচে কেউ অর্ডার করবেন না! বাবা/মা বা
-        ফ্যামিলির টাকা চুরি করে অর্ডার করলে তার বিরুদ্ধে
-        আইনগত ব্যবস্থা নেওয়া হবে!
+
+        ১৮ বছরের নিচে কেউ অর্ডার করবেন না!
+        বাবা/মা বা ফ্যামিলির টাকা চুরি করে
+        অর্ডার করলে তার বিরুদ্ধে আইনগত
+        ব্যবস্থা নেওয়া হবে!
+
     </div>
 
 </section>
 
 
-<!-- SLIDER -->
+
+<!-- =========================
+     SLIDER
+========================= -->
+
 <section class="slider">
+
 
     <div class="slide one active">
 
@@ -563,19 +903,31 @@ body{
             </div>
 
             <h1>
-                নিরাপদ ও দ্রুত<br>
-                <span>ডায়মন্ড টপআপ</span>
+
+                নিরাপদ ও দ্রুত
+
+                <br>
+
+                <span>
+                    ডায়মন্ড টপআপ
+                </span>
+
             </h1>
 
             <p>
-                আপনার Player UID দিয়ে সহজেই ডায়মন্ড নিন।
+                আপনার Player UID দিয়ে
+                সহজেই ডায়মন্ড নিন।
             </p>
 
         </div>
 
-        <div class="diamond">💎</div>
+
+        <div class="diamond">
+            💎
+        </div>
 
     </div>
+
 
 
     <div class="slide two">
@@ -587,19 +939,31 @@ body{
             </div>
 
             <h1>
-                দ্রুত ও নিরাপদ<br>
-                <span>টপআপ করুন</span>
+
+                দ্রুত ও নিরাপদ
+
+                <br>
+
+                <span>
+                    টপআপ করুন
+                </span>
+
             </h1>
 
             <p>
-                কয়েকটি সহজ ধাপেই অর্ডার সম্পন্ন করুন।
+                কয়েকটি সহজ ধাপেই
+                অর্ডার সম্পন্ন করুন।
             </p>
 
         </div>
 
-        <div class="diamond">💎</div>
+
+        <div class="diamond">
+            💎
+        </div>
 
     </div>
+
 
 
     <div class="slide three">
@@ -611,68 +975,118 @@ body{
             </div>
 
             <h1>
-                SPECIAL<br>
-                <span>TOPUP OFFER</span>
+
+                SPECIAL
+
+                <br>
+
+                <span>
+                    TOPUP OFFER
+                </span>
+
             </h1>
 
             <p>
-                আপনার পছন্দের প্যাকেজ বেছে নিন।
+                আপনার পছন্দের প্যাকেজ
+                বেছে নিন।
             </p>
 
         </div>
 
-        <div class="diamond">🎁</div>
+
+        <div class="diamond">
+            🎁
+        </div>
 
     </div>
+
 
 </section>
 
 
-<!-- DOTS -->
+
+<!-- =========================
+     SLIDER DOTS
+========================= -->
+
 <div class="slider-dots">
 
     <span class="dot active"></span>
+
     <span class="dot"></span>
+
     <span class="dot"></span>
+
     <span class="dot"></span>
+
     <span class="dot"></span>
 
 </div>
 
 
-<!-- SUPPORT -->
+
+<!-- =========================
+     SUPPORT
+========================= -->
+
 <section class="support">
 
+
     <div class="support-btn">
 
-        <div class="support-icon">✈</div>
+        <div class="support-icon">
+            ✈
+        </div>
 
         <div class="support-text">
-            <small>SUPPORT</small>
-            <strong>Telegram</strong>
+
+            <small>
+                SUPPORT
+            </small>
+
+            <strong>
+                Telegram
+            </strong>
+
         </div>
 
     </div>
 
 
+
     <div class="support-btn">
 
-        <div class="support-icon">👥</div>
+        <div class="support-icon">
+            👥
+        </div>
 
         <div class="support-text">
-            <small>GROUP</small>
-            <strong>Join Group</strong>
+
+            <small>
+                GROUP
+            </small>
+
+            <strong>
+                Join Group
+            </strong>
+
         </div>
 
     </div>
+
 
 </section>
 
 
-<!-- SPECIAL OFFER -->
+
+<!-- =========================
+     SPECIAL OFFER
+========================= -->
+
 <h2 class="section-title">
     SPECIAL OFFER
 </h2>
+
 
 <section class="special">
 
@@ -689,7 +1103,11 @@ body{
 </section>
 
 
-<!-- TOPUP -->
+
+<!-- =========================
+     TOPUP
+========================= -->
+
 <h2 class="section-title">
     TOPUP
 </h2>
@@ -698,68 +1116,122 @@ body{
 <section class="topup-grid">
 
 
-    <div class="topup-item">
-
-        <div class="topup-image">
-            <div class="topup-icon">🎮</div>
-        </div>
-
-        <h3>FF LIKES</h3>
-
-    </div>
-
-
-    <div class="topup-item" onclick="openUidTopup()">
-
-        <div class="topup-image">
-            <div class="topup-icon">💎</div>
-        </div>
-
-        <h3>UID TOPUP (BD)</h3>
-
-    </div>
-
+    <!-- CARD 1 -->
 
     <div class="topup-item">
 
         <div class="topup-image">
-            <div class="topup-icon">🎁</div>
+
+            <div class="topup-icon">
+                🎮
+            </div>
+
         </div>
 
-        <h3>WEEKLY/MONTHLY</h3>
+        <h3>
+            FF LIKES
+        </h3>
 
     </div>
 
 
-    <div class="topup-item">
+
+    <!-- CARD 2 -->
+
+    <div class="topup-item"
+         onclick="openUidTopup()">
 
         <div class="topup-image">
-            <div class="topup-icon">💳</div>
+
+            <div class="topup-icon">
+                💎
+            </div>
+
         </div>
 
-        <h3>WEEKLY LITE</h3>
+        <h3>
+            UID TOPUP (BD)
+        </h3>
 
     </div>
 
 
+
+    <!-- CARD 3 -->
+
     <div class="topup-item">
 
         <div class="topup-image">
-            <div class="topup-icon">🎫</div>
+
+            <div class="topup-icon">
+                🎁
+            </div>
+
         </div>
 
-        <h3>LEVEL UP PASS</h3>
+        <h3>
+            WEEKLY/MONTHLY
+        </h3>
 
     </div>
 
 
+
+    <!-- CARD 4 -->
+
     <div class="topup-item">
 
         <div class="topup-image">
-            <div class="topup-icon">🐰</div>
+
+            <div class="topup-icon">
+                💳
+            </div>
+
         </div>
 
-        <h3>INDONESIA SERVER</h3>
+        <h3>
+            WEEKLY LITE
+        </h3>
+
+    </div>
+
+
+
+    <!-- CARD 5 -->
+
+    <div class="topup-item">
+
+        <div class="topup-image">
+
+            <div class="topup-icon">
+                🎫
+            </div>
+
+        </div>
+
+        <h3>
+            LEVEL UP PASS
+        </h3>
+
+    </div>
+
+
+
+    <!-- CARD 6 -->
+
+    <div class="topup-item">
+
+        <div class="topup-image">
+
+            <div class="topup-icon">
+                🐰
+            </div>
+
+        </div>
+
+        <h3>
+            INDONESIA SERVER
+        </h3>
 
     </div>
 
@@ -767,77 +1239,137 @@ body{
 </section>
 
 
-<!-- BOTTOM NAV -->
+
+<!-- =========================
+     BOTTOM NAV
+========================= -->
+
 <nav class="bottom-nav">
 
+
     <div class="nav active">
-        <span class="nav-icon">⌂</span>
+
+        <span class="nav-icon">
+            ⌂
+        </span>
+
         Home
+
     </div>
 
+
+
     <div class="nav">
-        <span class="nav-icon">▶</span>
+
+        <span class="nav-icon">
+            ▶
+        </span>
+
         Tutorial
+
     </div>
 
+
+
     <div class="nav">
-        <span class="nav-icon">▦</span>
+
+        <span class="nav-icon">
+            ▦
+        </span>
+
         TopUp
+
     </div>
 
+
+
     <div class="nav">
-        <span class="nav-icon">♧</span>
+
+        <span class="nav-icon">
+            ♧
+        </span>
+
         Contact Us
+
     </div>
+
 
 </nav>
 
 
+
 <script>
 
-/* SLIDER */
+/* =========================
+   SLIDER
+========================= */
 
-let slides = document.querySelectorAll(".slide");
-let dots = document.querySelectorAll(".dot");
-let current = 0;
+let slides =
+document.querySelectorAll(".slide");
+
+let dots =
+document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+
 
 function showSlide(index){
 
-    slides.forEach(slide => {
+    slides.forEach(function(slide){
+
         slide.classList.remove("active");
+
     });
 
-    dots.forEach(dot => {
+
+    dots.forEach(function(dot){
+
         dot.classList.remove("active");
+
     });
 
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
+
+    slides[index]
+        .classList.add("active");
+
+    dots[index]
+        .classList.add("active");
 
 }
 
+
 setInterval(function(){
 
-    current++;
+    currentSlide++;
 
-    if(current >= slides.length){
-        current = 0;
+    if(
+        currentSlide >=
+        slides.length
+    ){
+
+        currentSlide = 0;
+
     }
 
-    showSlide(current);
+    showSlide(currentSlide);
 
 },4000);
 
 
-/* UID TOPUP */
+/* =========================
+   UID TOPUP
+========================= */
 
 function openUidTopup(){
 
-    alert("UID TOPUP page পরের ধাপে connect করা হবে.");
+    alert(
+        "UID TOPUP page আমরা পরের ধাপে তৈরি করব।"
+    );
 
 }
 
 </script>
+
 
 </body>
 </html>
