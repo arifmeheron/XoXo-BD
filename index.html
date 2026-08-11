@@ -2,600 +2,500 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>XoXo BD | Diamond TopUp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XoXo BD - Free Fire TopUp</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-font-family:Arial,sans-serif;
-background:#f3f5ff;
-color:#172f52;
-padding-bottom:90px
+    font-family:Arial, sans-serif;
+    background:#f2f6ff;
+    color:#17365d;
+    padding-bottom:90px;
 }
+
+/* HEADER */
 .header{
-height:82px;
-background:#fff;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 18px;
-box-shadow:0 2px 10px #0002;
-position:sticky;
-top:0;
-z-index:10
+    height:90px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+    box-shadow:0 2px 10px rgba(0,0,0,.12);
+    position:sticky;
+    top:0;
+    z-index:20;
 }
+
 .logo{
-font-size:26px;
-font-weight:900;
-color:#641fc1
+    color:#6734c6;
+    font-size:30px;
+    font-weight:800;
 }
+
 .logo span{
-display:block;
-font-size:10px;
-letter-spacing:1px;
-color:#555;
-margin-top:2px
+    display:block;
+    color:#555;
+    font-size:13px;
+    letter-spacing:2px;
+    margin-top:4px;
 }
+
 .login{
-background:#6731bd;
-color:#fff;
-border:0;
-border-radius:7px;
-padding:12px 22px;
-font-size:17px;
-font-weight:bold
+    background:#6734c6;
+    color:white;
+    border:0;
+    padding:14px 27px;
+    border-radius:7px;
+    font-size:17px;
+    font-weight:bold;
 }
+
+/* NOTICE */
 .notice{
-margin:16px 15px;
-background:#6731bd;
-color:white;
-padding:15px;
-border-radius:2px;
-font-size:16px;
-line-height:1.5
+    margin:15px;
+    background:#6734c6;
+    color:white;
+    padding:18px;
+    border-radius:4px;
 }
-.notice b{
-font-size:22px;
-display:block;
-margin-bottom:4px
+
+.notice h2{
+    font-size:24px;
+    margin-bottom:8px;
 }
-.hero{
-margin:0 15px;
-height:220px;
-border-radius:3px;
-overflow:hidden;
-position:relative;
-background:
-radial-gradient(circle at 75% 45%,#8b22ff 0,#4800a0 22%,transparent 45%),
-linear-gradient(110deg,#260052,#090012 65%,#4b0090)
+
+.notice p{
+    font-size:17px;
+    line-height:1.5;
 }
-.hero:before{
-content:"FREE FIRE";
-position:absolute;
-top:20px;
-left:18px;
-color:white;
-font-size:19px;
-font-weight:900
+
+/* BANNER */
+.banner{
+    margin:15px;
+    height:250px;
+    border-radius:5px;
+    overflow:hidden;
+    position:relative;
+    background:linear-gradient(110deg,#25005d,#7200e8,#ff1744);
+    color:white;
+    display:flex;
+    align-items:center;
+    padding:25px;
 }
-.hero:after{
-content:"💎";
-position:absolute;
-right:25px;
-top:55px;
-font-size:105px;
-filter:drop-shadow(0 0 20px #16aaff)
+
+.banner:after{
+    content:"💎";
+    position:absolute;
+    right:35px;
+    font-size:105px;
+    filter:drop-shadow(0 0 25px #7ee7ff);
 }
-.heroText{
-position:absolute;
-left:20px;
-top:65px;
-z-index:2;
-color:#fff
+
+.banner small{
+    font-size:17px;
+    font-weight:bold;
 }
-.heroText h1{
-font-size:30px;
-line-height:1.15
+
+.banner h1{
+    font-size:38px;
+    margin:8px 0;
+    line-height:1.1;
 }
-.heroText h1 span{
-color:#ffd21b
+
+.banner h1 span{
+    color:#ffd400;
 }
-.heroText p{
-margin-top:9px;
-font-size:13px;
-color:#ddd
+
+.banner p{
+    font-size:16px;
 }
+
 .dots{
-text-align:center;
-padding:13px 0 20px
+    text-align:center;
+    margin:12px 0 20px;
 }
-.dots i{
-display:inline-block;
-width:21px;
-height:5px;
-margin:0 4px;
-background:#888;
-border-radius:3px
+
+.dots span{
+    display:inline-block;
+    width:22px;
+    height:7px;
+    border-radius:10px;
+    background:#8c8c8c;
+    margin:0 5px;
 }
-.dots .on{background:#111}
+
+.dots span.active{
+    background:#222;
+}
+
+/* SUPPORT */
 .support{
-display:flex;
-gap:12px;
-padding:0 15px
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    padding:0 15px;
 }
-.support a{
-flex:1;
-text-decoration:none;
-background:linear-gradient(135deg,#6731bd,#8147d6);
-color:white;
-border-radius:10px;
-padding:13px 8px;
-text-align:center;
-font-size:15px;
-font-weight:bold;
-box-shadow:0 3px 8px #0002
+
+.support-card{
+    background:linear-gradient(135deg,#6830c7,#8140df);
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(70,30,130,.2);
 }
-.support small{
-display:block;
-font-size:11px;
-opacity:.8;
-font-weight:normal
+
+.support-card .icon{
+    font-size:27px;
 }
-.sectionTitle{
-text-align:center;
-font-family:Georgia,serif;
-font-size:31px;
-margin:38px 0 22px;
-color:#123963
+
+.support-card small{
+    display:block;
+    opacity:.8;
+    margin-top:4px;
 }
-.packages{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px 14px;
-padding:0 16px
+
+.support-card strong{
+    display:block;
+    font-size:18px;
+    margin-top:3px;
 }
-.card{
-text-align:center
+
+/* SECTION */
+.section-title{
+    text-align:center;
+    font-family:Georgia,serif;
+    font-size:32px;
+    margin:45px 0 25px;
+    color:#15385f;
 }
-.cardImg{
-height:145px;
-border-radius:12px;
-background:
-radial-gradient(circle,#b75cff 0,#51139a 45%,#210043 100%);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:65px;
-box-shadow:0 4px 10px #0002;
-border:2px solid #fff
+
+/* SPECIAL OFFER */
+.special{
+    padding:0 28px;
 }
-.card h3{
-font-family:Georgia,serif;
-font-size:16px;
-margin-top:9px;
-color:#183a60
+
+.special-card{
+    width:185px;
 }
-.topup{
-margin-top:8px;
-background:#6731bd;
-border:0;
-color:white;
-padding:7px 16px;
-border-radius:18px;
-font-weight:bold
+
+.special-img{
+    height:115px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#27005d,#8b00ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:45px;
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
 }
-.recent{
-margin:38px 15px 0;
-background:#fff;
-border-radius:20px;
-padding:20px;
-box-shadow:0 3px 15px #0002
+
+.special-card h3{
+    font-family:Georgia,serif;
+    margin-top:12px;
+    font-size:17px;
 }
-.recent h2{
-font-size:22px;
-margin-bottom:15px
+
+/* TOPUP */
+.topup-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px 18px;
+    padding:0 27px;
 }
-.order{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:12px 0;
-border-bottom:1px solid #eee;
-font-size:13px
+
+.topup-card{
+    text-align:center;
+    cursor:pointer;
 }
-.order:last-child{border:0}
-.ok{
-color:#18a34a;
-font-weight:bold
+
+.card-img{
+    width:100%;
+    aspect-ratio:1/1;
+    border-radius:12px;
+    background:linear-gradient(135deg,#260052,#6d00d9);
+    border:3px solid white;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
 }
-.bottom{
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-height:74px;
-background:#fff;
-border-radius:20px 20px 0 0;
-box-shadow:0 -3px 15px #0002;
-display:flex;
-align-items:center;
-justify-content:space-around;
-z-index:20
+
+.card-img:before{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    background:#8d45ff;
+    border-radius:50%;
+    filter:blur(25px);
 }
-.nav{
-text-align:center;
-font-size:12px;
-color:#657080;
-font-weight:bold
+
+.card-img .emoji{
+    font-size:65px;
+    position:relative;
+    filter:drop-shadow(0 0 15px #6eeaff);
 }
-.nav .icon{
-font-size:25px;
-display:block;
-color:#687382;
-margin-bottom:3px
+
+.topup-card h3{
+    font-family:Georgia,serif;
+    font-size:16px;
+    margin-top:12px;
+    color:#15385f;
 }
-.nav.active{
-color:#6731bd
+
+/* BOTTOM NAV */
+.bottom-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height:78px;
+    background:white;
+    border-radius:25px 25px 0 0;
+    box-shadow:0 -3px 18px rgba(0,0,0,.15);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    z-index:50;
 }
-.nav.active .icon{
-color:#6731bd
+
+.nav-item{
+    text-align:center;
+    padding-top:10px;
+    color:#667080;
+    font-size:14px;
+    font-weight:bold;
 }
-@media(min-width:700px){
-body{max-width:1000px;margin:auto}
-.packages{grid-template-columns:repeat(3,1fr)}
-.hero{height:330px}
-.heroText h1{font-size:50px}
-.cardImg{height:190px}
+
+.nav-item .nav-icon{
+    display:block;
+    font-size:28px;
+    margin-bottom:4px;
+}
+
+.nav-item.active{
+    color:#6734c6;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+    .header{
+        height:82px;
+        padding:0 18px;
+    }
+
+    .logo{
+        font-size:27px;
+    }
+
+    .banner{
+        height:215px;
+    }
+
+    .banner h1{
+        font-size:31px;
+    }
+
+    .banner:after{
+        font-size:75px;
+        right:20px;
+    }
+
+    .topup-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:25px 12px;
+        padding:0 22px;
+    }
+
+    .topup-card h3{
+        font-size:13px;
+    }
+
+    .card-img .emoji{
+        font-size:45px;
+    }
+}
+
+@media(max-width:450px){
+    .topup-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .topup-card h3{
+        font-size:11px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
-<div class="logo">
-✕ XoXo BD
-<span>FREE FIRE DIAMOND TOPUP</span>
-</div>
-<button class="login">Login</button>
+    <div class="logo">
+        × XoXo BD
+        <span>FREE FIRE DIAMOND TOPUP</span>
+    </div>
+
+    <button class="login">Login</button>
 </header>
 
-<div class="notice">
-<b>Notice:</b>
-১৮ বছরের নিচে কেউ অর্ডার করবেন না! নিরাপদে ও সতর্কতার সাথে অর্ডার করুন।
-</div>
 
-<section class="hero">
-<div class="heroText">
-<h1>নিরাপদ ও দ্রুত<br><span>ডায়মন্ড টপআপ</span></h1>
-<p>আপনার Player UID দিয়ে সহজেই ডায়মন্ড নিন।</p>
-</div>
+<!-- NOTICE -->
+<section class="notice">
+    <h2>Notice:</h2>
+    <p>
+        ১৮ বছরের নিচে কেউ অর্ডার করবেন না! নিরাপদে ও
+        সতর্কতার সাথে অর্ডার করুন।
+    </p>
+</section>
+
+
+<!-- BANNER -->
+<section class="banner">
+    <div>
+        <small>FREE FIRE</small>
+        <h1>
+            নিরাপদ ও দ্রুত<br>
+            <span>ডায়মন্ড টপআপ</span>
+        </h1>
+        <p>আপনার Player UID দিয়ে সহজেই ডায়মন্ড নিন।</p>
+    </div>
 </section>
 
 <div class="dots">
-<i class="on"></i>
-<i></i>
-<i></i>
-<i></i>
-<i></i>
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
 </div>
 
-<div class="support">
-<a href="#">
-📲
-<small>SUPPORT</small>
-Telegram
-</a>
-<a href="#">
-👥
-<small>GROUP</small>
-Join Group
-</a>
-</div>
 
-<h2 class="sectionTitle">TOPUP</h2>
+<!-- SUPPORT -->
+<section class="support">
 
-<section class="packages">
+    <div class="support-card">
+        <div class="icon">✈️</div>
+        <small>SUPPORT</small>
+        <strong>Telegram</strong>
+    </div>
 
-<div class="card">
-<div class="cardImg">💎</div>
-<h3>100 💎</h3>
-<button class="topup">৳ 80</button>
-</div>
-
-<div class="card">
-<div class="cardImg">💎</div>
-<h3>310 💎</h3>
-<button class="topup">৳ 240</button>
-</div>
-
-<div class="card">
-<div class="cardImg">💎</div>
-<h3>520 💎</h3>
-<button class="topup">৳ 400</button>
-</div>
-
-<div class="card">
-<div class="cardImg">💎</div>
-<h3>1060 💎</h3>
-<button class="topup">৳ 780</button>
-</div>
-
-<div class="card">
-<div class="cardImg">💎</div>
-<h3>2180 💎</h3>
-<button class="topup">৳ 1,600</button>
-</div>
-
-<div class="card">
-<div class="cardImg">💎</div>
-<h3>5600 💎</h3>
-<button class="topup">৳ 3,900</button>
-</div>
+    <div class="support-card">
+        <div class="icon">👥</div>
+        <small>GROUP</small>
+        <strong>Join Group</strong>
+    </div>
 
 </section>
 
-<div class="recent">
-<h2>🛍️ Recent Orders</h2>
 
-<div class="order">
-<span>UID ****4582<br>1060 Diamonds</span>
-<span class="ok">✓ Success</span>
-</div>
+<!-- SPECIAL OFFER -->
+<h2 class="section-title">SPECIAL OFFER</h2>
 
-<div class="order">
-<span>UID ****7821<br>520 Diamonds</span>
-<span class="ok">✓ Success</span>
-</div>
+<section class="special">
 
-<div class="order">
-<span>UID ****1290<br>2180 Diamonds</span>
-<span class="ok">✓ Success</span>
-</div>
+    <div class="special-card">
 
-</div>
+        <div class="special-img">
+            💎
+        </div>
 
-<nav class="bottom">
+        <h3>COMING SOON</h3>
 
-<div class="nav active">
-<span class="icon">⌂</span>
-Home
-</div>
+    </div>
 
-<div class="nav">
-<span class="icon">▶</span>
-Tutorial
-</div>
+</section>
 
-<div class="nav">
-<span class="icon">▦</span>
-TopUp
-</div>
 
-<div class="nav">
-<span class="icon">♧</span>
-Contact Us
-</div>
+<!-- TOPUP -->
+<h2 class="section-title">TOPUP</h2>
+
+<section class="topup-grid">
+
+    <div class="topup-card">
+        <div class="card-img">
+            <div class="emoji">🎮</div>
+        </div>
+        <h3>FF LIKES</h3>
+    </div>
+
+
+    <div class="topup-card">
+        <div class="card-img">
+            <div class="emoji">💎</div>
+        </div>
+        <h3>UID TOPUP (BD)</h3>
+    </div>
+
+
+    <div class="topup-card">
+        <div class="card-img">
+            <div class="emoji">🎁</div>
+        </div>
+        <h3>WEEKLY/MONTHLY</h3>
+    </div>
+
+
+    <div class="topup-card">
+        <div class="card-img">
+            <div class="emoji">💎</div>
+        </div>
+        <h3>WEEKLY LITE</h3>
+    </div>
+
+
+    <div class="topup-card">
+        <div class="card-img">
+            <div class="emoji">🎫</div>
+        </div>
+        <h3>LEVEL UP PASS</h3>
+    </div>
+
+
+    <div class="topup-card">
+        <div class="card-img">
+            <div class="emoji">🐰</div>
+        </div>
+        <h3>INDONESIA SERVER</h3>
+    </div>
+
+</section>
+
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+
+    <div class="nav-item active">
+        <span class="nav-icon">⌂</span>
+        Home
+    </div>
+
+    <div class="nav-item">
+        <span class="nav-icon">▶️</span>
+        Tutorial
+    </div>
+
+    <div class="nav-item">
+        <span class="nav-icon">▦</span>
+        TopUp
+    </div>
+
+    <div class="nav-item">
+        <span class="nav-icon">♧</span>
+        Contact Us
+    </div>
 
 </nav>
-<!-- XoXo BD TOPUP ORDER -->
-<section class="topup-order" id="topup-order">
 
-  <h2>💎 DIAMOND TOPUP</h2>
-  <p class="order-subtitle">আপনার Player UID দিয়ে নিরাপদে অর্ডার করুন</p>
-
-  <div class="uid-box">
-    <label>Player UID</label>
-    <input type="number" id="playerUID" placeholder="Enter Player UID">
-  </div>
-
-  <h3>Select Diamond Package</h3>
-
-  <div class="diamond-grid">
-
-    <button class="diamond-card" onclick="selectPackage(this,'100 Diamonds',20)">
-      <strong>💎 100</strong>
-      <span>Diamonds</span>
-      <b>৳20</b>
-    </button>
-
-    <button class="diamond-card" onclick="selectPackage(this,'310 Diamonds',55)">
-      <strong>💎 310</strong>
-      <span>Diamonds</span>
-      <b>৳55</b>
-    </button>
-
-    <button class="diamond-card" onclick="selectPackage(this,'520 Diamonds',90)">
-      <strong>💎 520</strong>
-      <span>Diamonds</span>
-      <b>৳90</b>
-    </button>
-
-    <button class="diamond-card" onclick="selectPackage(this,'1060 Diamonds',175)">
-      <strong>💎 1060</strong>
-      <span>Diamonds</span>
-      <b>৳175</b>
-    </button>
-
-    <button class="diamond-card" onclick="selectPackage(this,'2180 Diamonds',350)">
-      <strong>💎 2180</strong>
-      <span>Diamonds</span>
-      <b>৳350</b>
-    </button>
-
-    <button class="diamond-card" onclick="selectPackage(this,'5600 Diamonds',850)">
-      <strong>💎 5600</strong>
-      <span>Diamonds</span>
-      <b>৳850</b>
-    </button>
-
-  </div>
-
-  <div class="order-summary" id="orderSummary">
-    <p>Selected: <b id="selectedPackage">None</b></p>
-    <p>Price: <b id="selectedPrice">৳0</b></p>
-    <button onclick="continueOrder()">Continue Order →</button>
-  </div>
-
-</section>
-
-<style>
-.topup-order{
-  margin:25px 15px;
-  padding:25px 18px;
-  background:#fff;
-  border-radius:20px;
-  box-shadow:0 5px 20px #00000012;
-  text-align:center;
-}
-
-.topup-order h2{
-  margin:0;
-  color:#54209c;
-  font-size:28px;
-}
-
-.order-subtitle{
-  color:#777;
-  margin:8px 0 22px;
-}
-
-.uid-box{
-  text-align:left;
-  margin-bottom:22px;
-}
-
-.uid-box label{
-  display:block;
-  font-weight:bold;
-  margin-bottom:8px;
-}
-
-.uid-box input{
-  width:100%;
-  padding:15px;
-  border:2px solid #ddd;
-  border-radius:12px;
-  font-size:16px;
-  outline:none;
-}
-
-.uid-box input:focus{
-  border-color:#6f35c5;
-}
-
-.topup-order h3{
-  text-align:left;
-  margin-bottom:12px;
-}
-
-.diamond-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-}
-
-.diamond-card{
-  border:2px solid #eee;
-  background:#faf7ff;
-  border-radius:15px;
-  padding:16px 8px;
-  cursor:pointer;
-}
-
-.diamond-card strong{
-  display:block;
-  color:#5d25a8;
-  font-size:21px;
-}
-
-.diamond-card span{
-  display:block;
-  color:#777;
-  margin:5px 0;
-}
-
-.diamond-card b{
-  color:#111;
-  font-size:17px;
-}
-
-.diamond-card.selected{
-  border-color:#6d2fc0;
-  background:#eee3ff;
-  transform:scale(1.02);
-}
-
-.order-summary{
-  margin-top:22px;
-  padding:18px;
-  background:#f5efff;
-  border-radius:15px;
-}
-
-.order-summary p{
-  margin:7px 0;
-}
-
-.order-summary button{
-  width:100%;
-  margin-top:12px;
-  padding:14px;
-  border:0;
-  border-radius:12px;
-  background:#6d32c2;
-  color:white;
-  font-size:17px;
-  font-weight:bold;
-}
-
-@media(max-width:400px){
-  .diamond-grid{
-    gap:9px;
-  }
-}
-</style>
-
-<script>
-let selectedPackage = "";
-let selectedPrice = 0;
-
-function selectPackage(card, packageName, price){
-
-  document.querySelectorAll(".diamond-card")
-    .forEach(item => item.classList.remove("selected"));
-
-  card.classList.add("selected");
-
-  selectedPackage = packageName;
-  selectedPrice = price;
-
-  document.getElementById("selectedPackage").innerText = packageName;
-  document.getElementById("selectedPrice").innerText = "৳" + price;
-}
-
-function continueOrder(){
-
-  const uid = document.getElementById("playerUID").value.trim();
-
-  if(!uid){
-    alert("Please enter your Player UID");
-    return;
-  }
-
-  if(!selectedPackage){
-    alert("Please select a diamond package");
-    return;
-  }
-
-  alert(
-    "Order Ready!\\n\\n" +
-    "Player UID: " + uid +
-    "\\nPackage: " + selectedPackage +
-    "\\nPrice: ৳" + selectedPrice
-  );
-}
-</script>
 </body>
 </html>
