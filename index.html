@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XoXo BD - Free Fire Diamond TopUp</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f3f6ff;
+  color:#172f52;
+  padding-bottom:90px;
+}
+
+.header{
+  height:82px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 18px;
+  box-shadow:0 2px 8px #00000012;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:900;
+  color:#6d3dcc;
+}
+
+.logo span{
+  display:block;
+  font-size:13px;
+  text-align:center;
+  color:#8b43ed;
+}
+
+.login{
+  background:#693cc1;
+  color:white;
+  border:0;
+  padding:13px 24px;
+  border-radius:6px;
+  font-size:17px;
+  font-weight:bold;
+}
+
+.notice{
+  margin:16px 15px;
+  padding:15px;
+  background:#693cc1;
+  color:white;
+  border-radius:2px;
+}
+
+.notice h2{
+  font-family:Georgia,serif;
+  margin-bottom:10px;
+}
+
+.notice p{
+  font-size:17px;
+  line-height:1.5;
+}
+
+.banner{
+  margin:0 15px;
+  height:210px;
+  border-radius:4px;
+  overflow:hidden;
+  background:linear-gradient(110deg,#4c00b8,#9b28ff,#e50000);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-align:center;
+}
+
+.banner h1{
+  font-size:30px;
+  text-shadow:2px 2px 5px #000;
+}
+
+.dots{
+  text-align:center;
+  margin:16px 0;
+}
+
+.dots span{
+  display:inline-block;
+  width:22px;
+  height:7px;
+  background:#8b91a0;
+  margin:0 5px;
+}
+
+.dots span:last-child{
+  background:#111;
+}
+
+.social{
+  display:flex;
+  gap:14px;
+  padding:0 15px;
+}
+
+.social a{
+  flex:1;
+  background:linear-gradient(135deg,#693cc1,#8248db);
+  color:white;
+  text-decoration:none;
+  padding:14px 10px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 4px 10px #0002;
+}
+
+.social small{
+  display:block;
+  opacity:.8;
+}
+
+.social strong{
+  font-size:17px;
+}
+
+.title{
+  text-align:center;
+  font-family:Georgia,serif;
+  font-size:34px;
+  margin:50px 0 25px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px 14px;
+  padding:0 15px;
+}
+
+.card{
+  text-align:center;
+  cursor:pointer;
+}
+
+.card-img{
+  height:145px;
+  border-radius:12px;
+  background:
+    radial-gradient(circle at center,#a747ff,#32106e 60%,#170b32);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:900;
+  font-size:22px;
+  padding:10px;
+  box-shadow:inset 0 0 30px #b44cff55;
+}
+
+.card:nth-child(2) .card-img{
+  background:radial-gradient(circle,#d68cff,#4b1684 55%,#170b32);
+}
+
+.card:nth-child(3) .card-img{
+  background:radial-gradient(circle,#7d5aff,#31105f 55%,#16052d);
+}
+
+.card:nth-child(4) .card-img{
+  background:radial-gradient(circle,#65b9ff,#32106e 55%,#16052d);
+}
+
+.card:nth-child(5) .card-img{
+  background:radial-gradient(circle,#44cfff,#32106e 55%,#16052d);
+}
+
+.card:nth-child(6) .card-img{
+  background:radial-gradient(circle,#ff8bda,#4d136d 55%,#16052d);
+}
+
+.card h3{
+  margin-top:12px;
+  font-family:Georgia,serif;
+  font-size:17px;
+}
+
+.orders{
+  margin:45px 15px 0;
+  background:white;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 2px 15px #00000012;
+}
+
+.orders h2{
+  font-size:25px;
+  color:#101b39;
+}
+
+.bottom{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:78px;
+  background:white;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  box-shadow:0 -3px 15px #0002;
+  z-index:10;
+}
+
+.bottom a{
+  text-decoration:none;
+  color:#687080;
+  text-align:center;
+  font-size:13px;
+}
+
+.bottom .active{
+  color:#693cc1;
+  font-weight:bold;
+}
+
+.icon{
+  display:block;
+  font-size:27px;
+  margin-bottom:3px;
+}
+
+@media(max-width:600px){
+  .grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .card-img{
+    height:120px;
+    font-size:17px;
+  }
+
+  .card h3{
+    font-size:14px;
+  }
+
+  .banner{
+    height:190px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">
+    XoXo
+    <span>BD TOPUP</span>
+  </div>
+
+  <button class="login">Login</button>
+</header>
+
+<section class="notice">
+  <h2>Notice:</h2>
+  <p>
+    ১৮ বছরের নিচে কেউ অর্ডার করবেন না! বাবা/মা বা পরিবারের টাকা
+    চুরি করে অর্ডার করলে তার বিরুদ্ধে আইনগত ব্যবস্থা নেওয়া হবে!
+  </p>
+</section>
+
+<section class="banner">
+  <div>
+    <h1>FREE FIRE<br>DIAMOND TOPUP</h1>
+    <p>XoXo BD — নিরাপদ ও দ্রুত টপআপ</p>
+  </div>
+</section>
+
+<div class="dots">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="social">
+  <a href="#">
+    <small>SUPPORT</small>
+    <strong>Telegram</strong>
+  </a>
+
+  <a href="#">
+    <small>GROUP</small>
+    <strong>Join Group</strong>
+  </a>
+</div>
+
+<h1 class="title">TOPUP</h1>
+
+<section class="grid">
+
+  <div class="card">
+    <div class="card-img">FREE<br>FIRE<br>LIKES</div>
+    <h3>FF LIKES</h3>
+  </div>
+
+  <div class="card">
+    <div class="card-img">💎<br>UID TOPUP</div>
+    <h3>UID TOPUP (BD)</h3>
+  </div>
+
+  <div class="card">
+    <div class="card-img">💎<br>WEEKLY</div>
+    <h3>WEEKLY/MONTHLY</h3>
+  </div>
+
+  <div class="card">
+    <div class="card-img">💎<br>WEEKLY LITE</div>
+    <h3>WEEKLY LITE</h3>
+  </div>
+
+  <div class="card">
+    <div class="card-img">💎<br>LEVEL UP PASS</div>
+    <h3>LEVEL UP PASS</h3>
+  </div>
+
+  <div class="card">
+    <div class="card-img">🐰<br>INDONESIA</div>
+    <h3>INDONESIA SERVER</h3>
+  </div>
+
+</section>
+
+<section class="orders">
+  <h2>🛍️ Recent Orders</h2>
+  <br>
+  <p>Recent orders will appear here.</p>
+</section>
+
+<nav class="bottom">
+  <a class="active" href="#">
+    <span class="icon">⌂</span>
+    Home
+  </a>
+
+  <a href="#">
+    <span class="icon">▶</span>
+    Tutorial
+  </a>
+
+  <a href="#">
+    <span class="icon">▦</span>
+    TopUp
+  </a>
+
+  <a href="#">
+    <span class="icon">♧</span>
+    Contact Us
+  </a>
+</nav>
+
+</body>
+</html>
