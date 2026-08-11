@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>XoXo BD - UID TopUp</title>
 
 <style>
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 body{
@@ -23,29 +24,29 @@ body{
 /* HEADER */
 
 .header{
-    height:75px;
-    background:white;
+    height:72px;
+    background:#ffffff;
     display:flex;
     align-items:center;
     padding:0 15px;
-    gap:15px;
+    gap:14px;
     box-shadow:0 2px 8px rgba(0,0,0,0.10);
 }
 
 .back{
-    width:42px;
-    height:42px;
-    border:none;
+    width:40px;
+    height:40px;
+    border:0;
     border-radius:50%;
     background:#eee7ff;
     color:#6735c5;
-    font-size:28px;
+    font-size:25px;
     font-weight:bold;
 }
 
 .logo{
-    font-size:25px;
-    font-weight:bold;
+    font-size:24px;
+    font-weight:900;
     color:#6735c5;
 }
 
@@ -53,45 +54,47 @@ body{
 /* MAIN */
 
 .container{
-    padding:20px 15px;
+    padding:18px 15px;
 }
 
 .title{
     text-align:center;
-    font-size:29px;
-    margin-bottom:6px;
+    font-size:27px;
+    margin-bottom:5px;
 }
 
 .subtitle{
     text-align:center;
     color:#777;
-    margin-bottom:22px;
+    font-size:14px;
+    margin-bottom:20px;
 }
 
 
-/* UID BOX */
+/* PLAYER UID */
 
 .uid-box{
-    background:white;
-    border-radius:12px;
-    padding:18px;
-    margin-bottom:25px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+    background:#ffffff;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:22px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.07);
 }
 
 .uid-box label{
     display:block;
+    font-size:15px;
     font-weight:bold;
-    margin-bottom:8px;
+    margin-bottom:7px;
 }
 
 .uid-input{
     width:100%;
-    height:50px;
-    border:2px solid #ddd;
-    border-radius:9px;
-    padding:0 13px;
-    font-size:16px;
+    height:47px;
+    border:1px solid #d8d8d8;
+    border-radius:8px;
+    padding:0 12px;
+    font-size:15px;
     outline:none;
 }
 
@@ -100,98 +103,145 @@ body{
 }
 
 
-/* TITLE */
+/* SELECT RECHARGE */
 
 .select-title{
-    font-size:23px;
-    margin-bottom:14px;
+    font-size:21px;
+    margin-bottom:12px;
 }
 
 
-/* PACKAGE GRID */
+/* GRID */
 
 .package-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:14px;
+    gap:10px;
 }
 
 
-/* PACKAGE CARD */
+/* SMALL CARD */
 
 .package{
-    background:white;
-    border:2px solid #e1e1e1;
-    border-radius:12px;
-    min-height:135px;
-    padding:15px 8px;
+    width:100%;
+    height:98px;
+
+    background:#ffffff;
+
+    border:1px solid #dedede;
+    border-radius:9px;
+
+    padding:9px 6px;
+
     text-align:center;
+
     cursor:pointer;
-    box-shadow:0 3px 8px rgba(0,0,0,0.06);
+
+    box-shadow:0 2px 6px rgba(0,0,0,0.06);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
 .package.selected{
-    border-color:#6735c5;
-    background:#f4efff;
+    border:2px solid #6735c5;
+    background:#f5f0ff;
 }
 
 
-/* DIAMOND */
+/* DIAMOND TEXT */
 
 .diamond{
-    font-size:38px;
-    margin-bottom:7px;
+    font-size:13px;
+    color:#777;
+    margin-bottom:3px;
 }
 
 
-/* TEXT */
+/* AMOUNT */
 
 .amount{
     display:block;
     color:#6735c5;
-    font-size:18px;
-    font-weight:bold;
+    font-size:15px;
+    font-weight:800;
 }
+
+
+/* PRICE */
 
 .price{
     display:block;
     color:#222;
-    font-size:16px;
+    font-size:13px;
     font-weight:bold;
-    margin-top:7px;
+    margin-top:4px;
 }
 
 
-/* BUTTON */
+/* CONTINUE */
 
 .continue{
     width:100%;
-    height:52px;
-    margin-top:24px;
-    border:none;
-    border-radius:10px;
+    height:50px;
+
+    margin-top:20px;
+
+    border:0;
+    border-radius:9px;
+
     background:#6735c5;
-    color:white;
-    font-size:18px;
+    color:#ffffff;
+
+    font-size:17px;
     font-weight:bold;
 }
 
 
-/* MOBILE */
+/* SMALL PHONE */
 
 @media(max-width:390px){
 
+    .container{
+        padding-left:13px;
+        padding-right:13px;
+    }
+
     .package{
-        min-height:125px;
-        padding:13px 5px;
+        height:94px;
     }
 
     .amount{
-        font-size:16px;
+        font-size:14px;
     }
 
     .price{
-        font-size:15px;
+        font-size:12px;
+    }
+
+}
+
+
+/* VERY SMALL PHONE */
+
+@media(max-width:360px){
+
+    .package{
+        height:90px;
+    }
+
+    .amount{
+        font-size:13px;
+    }
+
+    .diamond{
+        font-size:12px;
+    }
+
+    .price{
+        font-size:12px;
     }
 
 }
@@ -218,6 +268,7 @@ body{
 </div>
 
 
+
 <!-- MAIN -->
 
 <div class="container">
@@ -231,7 +282,8 @@ body{
     </p>
 
 
-    <!-- UID -->
+
+    <!-- PLAYER UID -->
 
     <div class="uid-box">
 
@@ -249,18 +301,22 @@ body{
     </div>
 
 
-    <!-- PACKAGES -->
+
+    <!-- SELECT RECHARGE -->
 
     <h2 class="select-title">
         Select Recharge
     </h2>
 
 
+
+    <!-- DIAMOND CARDS -->
+
     <div class="package-grid">
 
 
         <div class="package"
-             onclick="selectPackage(this,'25 Diamonds','20')">
+        onclick="selectPackage(this,'25 Diamonds','20')">
 
             <div class="diamond">
                 Diamond
@@ -277,8 +333,9 @@ body{
         </div>
 
 
+
         <div class="package"
-             onclick="selectPackage(this,'50 Diamonds','35')">
+        onclick="selectPackage(this,'50 Diamonds','35')">
 
             <div class="diamond">
                 Diamond
@@ -295,8 +352,9 @@ body{
         </div>
 
 
+
         <div class="package"
-             onclick="selectPackage(this,'115 Diamonds','75')">
+        onclick="selectPackage(this,'115 Diamonds','75')">
 
             <div class="diamond">
                 Diamond
@@ -313,8 +371,9 @@ body{
         </div>
 
 
+
         <div class="package"
-             onclick="selectPackage(this,'240 Diamonds','150')">
+        onclick="selectPackage(this,'240 Diamonds','150')">
 
             <div class="diamond">
                 Diamond
@@ -331,8 +390,9 @@ body{
         </div>
 
 
+
         <div class="package"
-             onclick="selectPackage(this,'355 Diamonds','220')">
+        onclick="selectPackage(this,'355 Diamonds','220')">
 
             <div class="diamond">
                 Diamond
@@ -349,8 +409,9 @@ body{
         </div>
 
 
+
         <div class="package"
-             onclick="selectPackage(this,'480 Diamonds','300')">
+        onclick="selectPackage(this,'480 Diamonds','300')">
 
             <div class="diamond">
                 Diamond
@@ -367,8 +428,9 @@ body{
         </div>
 
 
+
         <div class="package"
-             onclick="selectPackage(this,'610 Diamonds','380')">
+        onclick="selectPackage(this,'610 Diamonds','380')">
 
             <div class="diamond">
                 Diamond
@@ -385,8 +447,9 @@ body{
         </div>
 
 
+
         <div class="package"
-             onclick="selectPackage(this,'850 Diamonds','520')">
+        onclick="selectPackage(this,'850 Diamonds','520')">
 
             <div class="diamond">
                 Diamond
@@ -406,6 +469,7 @@ body{
     </div>
 
 
+
     <!-- CONTINUE -->
 
     <button class="continue" onclick="continueOrder()">
@@ -413,6 +477,7 @@ body{
     </button>
 
 </div>
+
 
 
 <script>
@@ -423,10 +488,17 @@ var selectedPrice = "";
 
 function selectPackage(card,name,price){
 
-    var cards = document.querySelectorAll(".package");
+    var cards =
+    document.querySelectorAll(".package");
 
-    for(var i=0;i<cards.length;i++){
+    for(
+        var i = 0;
+        i < cards.length;
+        i++
+    ){
+
         cards[i].classList.remove("selected");
+
     }
 
     card.classList.add("selected");
@@ -438,15 +510,20 @@ function selectPackage(card,name,price){
 
 function continueOrder(){
 
-    var uid = document.getElementById("uid").value;
+    var uid =
+    document.getElementById("uid").value;
 
     if(uid === ""){
+
         alert("Please enter Player UID");
+
         return;
     }
 
     if(selectedPackage === ""){
+
         alert("Please select a package");
+
         return;
     }
 
@@ -455,17 +532,18 @@ function continueOrder(){
         "\nPackage: " + selectedPackage +
         "\nPrice: Tk " + selectedPrice
     );
+
 }
 
 
 function goHome(){
 
-    window.location.href = "index.html";
+    window.location.href =
+    "index.html";
 
 }
 
 </script>
-
 
 </body>
 </html>
