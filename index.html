@@ -379,6 +379,223 @@ Contact Us
 </div>
 
 </nav>
+<!-- XoXo BD TOPUP ORDER -->
+<section class="topup-order" id="topup-order">
 
+  <h2>💎 DIAMOND TOPUP</h2>
+  <p class="order-subtitle">আপনার Player UID দিয়ে নিরাপদে অর্ডার করুন</p>
+
+  <div class="uid-box">
+    <label>Player UID</label>
+    <input type="number" id="playerUID" placeholder="Enter Player UID">
+  </div>
+
+  <h3>Select Diamond Package</h3>
+
+  <div class="diamond-grid">
+
+    <button class="diamond-card" onclick="selectPackage(this,'100 Diamonds',20)">
+      <strong>💎 100</strong>
+      <span>Diamonds</span>
+      <b>৳20</b>
+    </button>
+
+    <button class="diamond-card" onclick="selectPackage(this,'310 Diamonds',55)">
+      <strong>💎 310</strong>
+      <span>Diamonds</span>
+      <b>৳55</b>
+    </button>
+
+    <button class="diamond-card" onclick="selectPackage(this,'520 Diamonds',90)">
+      <strong>💎 520</strong>
+      <span>Diamonds</span>
+      <b>৳90</b>
+    </button>
+
+    <button class="diamond-card" onclick="selectPackage(this,'1060 Diamonds',175)">
+      <strong>💎 1060</strong>
+      <span>Diamonds</span>
+      <b>৳175</b>
+    </button>
+
+    <button class="diamond-card" onclick="selectPackage(this,'2180 Diamonds',350)">
+      <strong>💎 2180</strong>
+      <span>Diamonds</span>
+      <b>৳350</b>
+    </button>
+
+    <button class="diamond-card" onclick="selectPackage(this,'5600 Diamonds',850)">
+      <strong>💎 5600</strong>
+      <span>Diamonds</span>
+      <b>৳850</b>
+    </button>
+
+  </div>
+
+  <div class="order-summary" id="orderSummary">
+    <p>Selected: <b id="selectedPackage">None</b></p>
+    <p>Price: <b id="selectedPrice">৳0</b></p>
+    <button onclick="continueOrder()">Continue Order →</button>
+  </div>
+
+</section>
+
+<style>
+.topup-order{
+  margin:25px 15px;
+  padding:25px 18px;
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 5px 20px #00000012;
+  text-align:center;
+}
+
+.topup-order h2{
+  margin:0;
+  color:#54209c;
+  font-size:28px;
+}
+
+.order-subtitle{
+  color:#777;
+  margin:8px 0 22px;
+}
+
+.uid-box{
+  text-align:left;
+  margin-bottom:22px;
+}
+
+.uid-box label{
+  display:block;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.uid-box input{
+  width:100%;
+  padding:15px;
+  border:2px solid #ddd;
+  border-radius:12px;
+  font-size:16px;
+  outline:none;
+}
+
+.uid-box input:focus{
+  border-color:#6f35c5;
+}
+
+.topup-order h3{
+  text-align:left;
+  margin-bottom:12px;
+}
+
+.diamond-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.diamond-card{
+  border:2px solid #eee;
+  background:#faf7ff;
+  border-radius:15px;
+  padding:16px 8px;
+  cursor:pointer;
+}
+
+.diamond-card strong{
+  display:block;
+  color:#5d25a8;
+  font-size:21px;
+}
+
+.diamond-card span{
+  display:block;
+  color:#777;
+  margin:5px 0;
+}
+
+.diamond-card b{
+  color:#111;
+  font-size:17px;
+}
+
+.diamond-card.selected{
+  border-color:#6d2fc0;
+  background:#eee3ff;
+  transform:scale(1.02);
+}
+
+.order-summary{
+  margin-top:22px;
+  padding:18px;
+  background:#f5efff;
+  border-radius:15px;
+}
+
+.order-summary p{
+  margin:7px 0;
+}
+
+.order-summary button{
+  width:100%;
+  margin-top:12px;
+  padding:14px;
+  border:0;
+  border-radius:12px;
+  background:#6d32c2;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+}
+
+@media(max-width:400px){
+  .diamond-grid{
+    gap:9px;
+  }
+}
+</style>
+
+<script>
+let selectedPackage = "";
+let selectedPrice = 0;
+
+function selectPackage(card, packageName, price){
+
+  document.querySelectorAll(".diamond-card")
+    .forEach(item => item.classList.remove("selected"));
+
+  card.classList.add("selected");
+
+  selectedPackage = packageName;
+  selectedPrice = price;
+
+  document.getElementById("selectedPackage").innerText = packageName;
+  document.getElementById("selectedPrice").innerText = "৳" + price;
+}
+
+function continueOrder(){
+
+  const uid = document.getElementById("playerUID").value.trim();
+
+  if(!uid){
+    alert("Please enter your Player UID");
+    return;
+  }
+
+  if(!selectedPackage){
+    alert("Please select a diamond package");
+    return;
+  }
+
+  alert(
+    "Order Ready!\\n\\n" +
+    "Player UID: " + uid +
+    "\\nPackage: " + selectedPackage +
+    "\\nPrice: ৳" + selectedPrice
+  );
+}
+</script>
 </body>
 </html>
