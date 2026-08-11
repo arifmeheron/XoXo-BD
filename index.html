@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XoXo BD - Free Fire TopUp</title>
+<title>XoXo BD - Free Fire Diamond TopUp</title>
 
 <style>
 *{
@@ -12,172 +12,260 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#f2f6ff;
-    color:#17365d;
-    padding-bottom:90px;
+html{
+    scroll-behavior:smooth;
 }
 
-/* HEADER */
+body{
+    background:#f1f6ff;
+    color:#17385f;
+    font-family:Arial,sans-serif;
+    padding-bottom:95px;
+}
+
+/* ================= HEADER ================= */
+
 .header{
-    height:90px;
+    height:100px;
     background:#fff;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 25px;
-    box-shadow:0 2px 10px rgba(0,0,0,.12);
+    padding:0 30px;
+    border-bottom:1px solid #ddd;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
     position:sticky;
     top:0;
-    z-index:20;
+    z-index:100;
 }
 
 .logo{
-    color:#6734c6;
-    font-size:30px;
-    font-weight:800;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    color:#000;
 }
 
-.logo span{
+.logo-mark{
+    font-size:48px;
+    font-weight:900;
+    color:#6515dc;
+    line-height:1;
+}
+
+.logo-name{
+    font-size:31px;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+
+.logo-name span{
     display:block;
-    color:#555;
-    font-size:13px;
+    font-size:11px;
     letter-spacing:2px;
-    margin-top:4px;
+    color:#555;
+    margin-top:5px;
 }
 
 .login{
-    background:#6734c6;
+    background:#6735c5;
     color:white;
     border:0;
-    padding:14px 27px;
     border-radius:7px;
-    font-size:17px;
+    padding:16px 28px;
+    font-size:18px;
     font-weight:bold;
 }
 
-/* NOTICE */
+/* ================= NOTICE ================= */
+
 .notice{
-    margin:15px;
-    background:#6734c6;
+    margin:0 15px;
+    margin-top:0;
+    background:#6735c5;
     color:white;
-    padding:18px;
-    border-radius:4px;
+    padding:15px;
+    position:relative;
 }
 
-.notice h2{
-    font-size:24px;
+.notice-title{
+    font-family:Georgia,serif;
+    font-size:28px;
     margin-bottom:8px;
 }
 
-.notice p{
-    font-size:17px;
+.notice-text{
+    font-family:Georgia,serif;
+    font-size:18px;
     line-height:1.5;
+    padding-right:25px;
 }
 
-/* BANNER */
-.banner{
-    margin:15px;
-    height:250px;
-    border-radius:5px;
-    overflow:hidden;
-    position:relative;
-    background:linear-gradient(110deg,#25005d,#7200e8,#ff1744);
-    color:white;
+.close{
+    position:absolute;
+    right:15px;
+    top:14px;
+    width:34px;
+    height:34px;
+    border:3px solid white;
+    border-radius:50%;
     display:flex;
     align-items:center;
-    padding:25px;
-}
-
-.banner:after{
-    content:"💎";
-    position:absolute;
-    right:35px;
-    font-size:105px;
-    filter:drop-shadow(0 0 25px #7ee7ff);
-}
-
-.banner small{
-    font-size:17px;
+    justify-content:center;
+    font-size:22px;
     font-weight:bold;
 }
 
-.banner h1{
-    font-size:38px;
-    margin:8px 0;
-    line-height:1.1;
+/* ================= SLIDER ================= */
+
+.slider{
+    margin:15px;
+    height:310px;
+    overflow:hidden;
+    position:relative;
+    border-radius:2px;
 }
 
-.banner h1 span{
+.slide{
+    width:100%;
+    height:100%;
+    display:none;
+    position:relative;
+    overflow:hidden;
+}
+
+.slide.active{
+    display:flex;
+}
+
+.slide.one{
+    background:
+    radial-gradient(circle at 25% 45%,#6c00ff 0,#30006d 45%,#120027 100%);
+}
+
+.slide.two{
+    background:
+    linear-gradient(100deg,#300060,#7200e9 55%,#ff1829);
+}
+
+.slide.three{
+    background:
+    linear-gradient(110deg,#17003d,#5f00b9,#16002e);
+}
+
+.slide-content{
+    padding:42px;
+    color:white;
+    position:relative;
+    z-index:3;
+}
+
+.slide-small{
+    font-size:22px;
+    font-weight:900;
+}
+
+.slide h1{
+    font-family:Georgia,serif;
+    font-size:42px;
+    line-height:1.08;
+    margin:10px 0;
+}
+
+.slide h1 span{
     color:#ffd400;
 }
 
-.banner p{
-    font-size:16px;
+.slide p{
+    font-family:Georgia,serif;
+    font-size:18px;
 }
 
-.dots{
-    text-align:center;
-    margin:12px 0 20px;
+.diamond{
+    position:absolute;
+    right:50px;
+    top:65px;
+    font-size:125px;
+    filter:drop-shadow(0 0 30px #50dfff);
 }
 
-.dots span{
-    display:inline-block;
+/* slider dots */
+
+.slider-dots{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin:18px 0 28px;
+}
+
+.dot{
     width:22px;
     height:7px;
-    border-radius:10px;
-    background:#8c8c8c;
-    margin:0 5px;
+    background:#8b8b8b;
 }
 
-.dots span.active{
-    background:#222;
+.dot.active{
+    background:#111;
 }
 
-/* SUPPORT */
+/* ================= SUPPORT ================= */
+
 .support{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
+    display:flex;
+    gap:15px;
     padding:0 15px;
 }
 
-.support-card{
-    background:linear-gradient(135deg,#6830c7,#8140df);
+.support-btn{
+    width:220px;
+    height:75px;
+    background:linear-gradient(135deg,#6b36c8,#7543ce);
     color:white;
-    padding:15px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 4px 10px rgba(70,30,130,.2);
+    border-radius:9px;
+    display:flex;
+    align-items:center;
+    padding:10px 15px;
+    box-shadow:0 4px 8px rgba(0,0,0,.15);
 }
 
-.support-card .icon{
-    font-size:27px;
+.support-icon{
+    width:47px;
+    height:47px;
+    background:white;
+    color:#6735c5;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    margin-right:12px;
 }
 
-.support-card small{
+.support-text small{
     display:block;
-    opacity:.8;
-    margin-top:4px;
+    font-size:12px;
+    letter-spacing:1px;
+    opacity:.9;
 }
 
-.support-card strong{
+.support-text strong{
     display:block;
-    font-size:18px;
+    font-size:17px;
     margin-top:3px;
 }
 
-/* SECTION */
+/* ================= SECTION TITLE ================= */
+
 .section-title{
     text-align:center;
     font-family:Georgia,serif;
-    font-size:32px;
-    margin:45px 0 25px;
-    color:#15385f;
+    font-size:39px;
+    color:#17385f;
+    margin:50px 0 30px;
 }
 
-/* SPECIAL OFFER */
+/* ================= SPECIAL OFFER ================= */
+
 .special{
     padding:0 28px;
 }
@@ -187,150 +275,241 @@ body{
 }
 
 .special-img{
-    height:115px;
+    width:185px;
+    height:180px;
     border-radius:10px;
-    background:linear-gradient(135deg,#27005d,#8b00ff);
+    overflow:hidden;
+    background:
+    linear-gradient(135deg,#210044,#8500ff);
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:45px;
-    box-shadow:0 3px 8px rgba(0,0,0,.15);
+    position:relative;
+    box-shadow:0 3px 10px rgba(0,0,0,.18);
 }
 
-.special-card h3{
+.special-img:before{
+    content:"💎";
+    font-size:70px;
+    filter:drop-shadow(0 0 18px #62eaff);
+}
+
+.special-img:after{
+    content:"WEEKLY";
+    position:absolute;
+    left:12px;
+    top:15px;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.special-name{
     font-family:Georgia,serif;
+    font-size:18px;
+    font-weight:bold;
     margin-top:12px;
-    font-size:17px;
+    color:#17385f;
 }
 
-/* TOPUP */
+/* ================= TOPUP ================= */
+
 .topup-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:28px 18px;
-    padding:0 27px;
+    gap:35px 28px;
+    padding:0 28px;
 }
 
-.topup-card{
-    text-align:center;
+.topup-item{
     cursor:pointer;
+    text-align:center;
 }
 
-.card-img{
+.topup-image{
     width:100%;
     aspect-ratio:1/1;
-    border-radius:12px;
-    background:linear-gradient(135deg,#260052,#6d00d9);
-    border:3px solid white;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    border-radius:9px;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at center,#7d22ff 0,#35005f 55%,#18002f 100%);
+    border:2px solid #fff;
+    box-shadow:0 4px 10px rgba(0,0,0,.17);
+    position:relative;
     display:flex;
     align-items:center;
     justify-content:center;
-    position:relative;
-    overflow:hidden;
 }
 
-.card-img:before{
+.topup-image:before{
     content:"";
-    position:absolute;
-    width:100px;
-    height:100px;
-    background:#8d45ff;
+    width:110px;
+    height:110px;
     border-radius:50%;
-    filter:blur(25px);
+    background:#8e32ff;
+    filter:blur(28px);
+    position:absolute;
 }
 
-.card-img .emoji{
+.topup-icon{
     font-size:65px;
     position:relative;
-    filter:drop-shadow(0 0 15px #6eeaff);
+    z-index:2;
+    filter:drop-shadow(0 0 15px #5ee9ff);
 }
 
-.topup-card h3{
+.topup-item h3{
     font-family:Georgia,serif;
-    font-size:16px;
-    margin-top:12px;
-    color:#15385f;
+    font-size:17px;
+    margin-top:13px;
+    color:#17385f;
 }
 
-/* BOTTOM NAV */
+/* ================= BOTTOM NAV ================= */
+
 .bottom-nav{
     position:fixed;
     left:0;
     right:0;
     bottom:0;
-    height:78px;
+    height:82px;
     background:white;
     border-radius:25px 25px 0 0;
-    box-shadow:0 -3px 18px rgba(0,0,0,.15);
+    box-shadow:0 -3px 15px rgba(0,0,0,.15);
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    z-index:50;
+    z-index:200;
 }
 
-.nav-item{
+.nav{
     text-align:center;
     padding-top:10px;
-    color:#667080;
-    font-size:14px;
+    color:#626b79;
+    font-size:15px;
     font-weight:bold;
 }
 
-.nav-item .nav-icon{
+.nav-icon{
     display:block;
-    font-size:28px;
-    margin-bottom:4px;
+    font-size:29px;
+    height:35px;
+    line-height:32px;
 }
 
-.nav-item.active{
-    color:#6734c6;
+.nav.active{
+    color:#6735c5;
 }
 
-/* MOBILE */
-@media(max-width:700px){
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:600px){
+
     .header{
-        height:82px;
-        padding:0 18px;
+        height:100px;
+        padding:0 28px;
     }
 
-    .logo{
-        font-size:27px;
+    .logo-mark{
+        font-size:42px;
     }
 
-    .banner{
-        height:215px;
+    .logo-name{
+        font-size:28px;
     }
 
-    .banner h1{
-        font-size:31px;
+    .login{
+        padding:15px 25px;
     }
 
-    .banner:after{
-        font-size:75px;
+    .notice{
+        margin:0 15px;
+    }
+
+    .slider{
+        height:310px;
+    }
+
+    .slide-content{
+        padding:35px 25px;
+    }
+
+    .slide h1{
+        font-size:34px;
+    }
+
+    .diamond{
         right:20px;
+        top:105px;
+        font-size:90px;
+    }
+
+    .support-btn{
+        width:calc(50% - 7px);
+    }
+
+    .support{
+        padding:0 15px;
+    }
+
+    .section-title{
+        font-size:34px;
     }
 
     .topup-grid{
         grid-template-columns:repeat(3,1fr);
-        gap:25px 12px;
-        padding:0 22px;
+        gap:35px 14px;
+        padding:0 27px;
     }
 
-    .topup-card h3{
+    .topup-item h3{
         font-size:13px;
     }
 
-    .card-img .emoji{
-        font-size:45px;
+    .topup-icon{
+        font-size:48px;
     }
 }
 
-@media(max-width:450px){
-    .topup-grid{
-        grid-template-columns:repeat(3,1fr);
+@media(max-width:390px){
+
+    .header{
+        padding:0 18px;
     }
 
-    .topup-card h3{
+    .logo-name{
+        font-size:25px;
+    }
+
+    .logo-name span{
+        font-size:9px;
+    }
+
+    .login{
+        padding:13px 20px;
+    }
+
+    .slider{
+        height:260px;
+    }
+
+    .slide h1{
+        font-size:29px;
+    }
+
+    .slide p{
+        font-size:15px;
+    }
+
+    .diamond{
+        font-size:70px;
+    }
+
+    .topup-grid{
+        padding:0 20px;
+        gap:30px 10px;
+    }
+
+    .topup-item h3{
         font-size:11px;
     }
 }
@@ -341,76 +520,169 @@ body{
 
 <!-- HEADER -->
 <header class="header">
+
     <div class="logo">
-        × XoXo BD
-        <span>FREE FIRE DIAMOND TOPUP</span>
+        <div class="logo-mark">✕</div>
+
+        <div class="logo-name">
+            XoXo BD
+            <span>FREE FIRE DIAMOND TOPUP</span>
+        </div>
     </div>
 
     <button class="login">Login</button>
+
 </header>
 
 
 <!-- NOTICE -->
 <section class="notice">
-    <h2>Notice:</h2>
-    <p>
-        ১৮ বছরের নিচে কেউ অর্ডার করবেন না! নিরাপদে ও
-        সতর্কতার সাথে অর্ডার করুন।
-    </p>
-</section>
 
+    <div class="close">×</div>
 
-<!-- BANNER -->
-<section class="banner">
-    <div>
-        <small>FREE FIRE</small>
-        <h1>
-            নিরাপদ ও দ্রুত<br>
-            <span>ডায়মন্ড টপআপ</span>
-        </h1>
-        <p>আপনার Player UID দিয়ে সহজেই ডায়মন্ড নিন।</p>
+    <div class="notice-title">Notice:</div>
+
+    <div class="notice-text">
+        ১৮ বছরের নিচে কেউ অর্ডার করবেন না! বাবা/মা বা
+        ফ্যামিলির টাকা চুরি করে অর্ডার করলে তার বিরুদ্ধে
+        আইনগত ব্যবস্থা নেওয়া হবে!
     </div>
+
 </section>
 
-<div class="dots">
-    <span class="active"></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+
+<!-- SLIDER -->
+<section class="slider">
+
+    <div class="slide one active">
+
+        <div class="slide-content">
+
+            <div class="slide-small">
+                FREE FIRE
+            </div>
+
+            <h1>
+                নিরাপদ ও দ্রুত<br>
+                <span>ডায়মন্ড টপআপ</span>
+            </h1>
+
+            <p>
+                আপনার Player UID দিয়ে সহজেই ডায়মন্ড নিন।
+            </p>
+
+        </div>
+
+        <div class="diamond">💎</div>
+
+    </div>
+
+
+    <div class="slide two">
+
+        <div class="slide-content">
+
+            <div class="slide-small">
+                XoXo BD
+            </div>
+
+            <h1>
+                দ্রুত ও নিরাপদ<br>
+                <span>টপআপ করুন</span>
+            </h1>
+
+            <p>
+                কয়েকটি সহজ ধাপেই অর্ডার সম্পন্ন করুন।
+            </p>
+
+        </div>
+
+        <div class="diamond">💎</div>
+
+    </div>
+
+
+    <div class="slide three">
+
+        <div class="slide-content">
+
+            <div class="slide-small">
+                FREE FIRE
+            </div>
+
+            <h1>
+                SPECIAL<br>
+                <span>TOPUP OFFER</span>
+            </h1>
+
+            <p>
+                আপনার পছন্দের প্যাকেজ বেছে নিন।
+            </p>
+
+        </div>
+
+        <div class="diamond">🎁</div>
+
+    </div>
+
+</section>
+
+
+<!-- DOTS -->
+<div class="slider-dots">
+
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+
 </div>
 
 
 <!-- SUPPORT -->
 <section class="support">
 
-    <div class="support-card">
-        <div class="icon">✈️</div>
-        <small>SUPPORT</small>
-        <strong>Telegram</strong>
+    <div class="support-btn">
+
+        <div class="support-icon">✈</div>
+
+        <div class="support-text">
+            <small>SUPPORT</small>
+            <strong>Telegram</strong>
+        </div>
+
     </div>
 
-    <div class="support-card">
-        <div class="icon">👥</div>
-        <small>GROUP</small>
-        <strong>Join Group</strong>
+
+    <div class="support-btn">
+
+        <div class="support-icon">👥</div>
+
+        <div class="support-text">
+            <small>GROUP</small>
+            <strong>Join Group</strong>
+        </div>
+
     </div>
 
 </section>
 
 
 <!-- SPECIAL OFFER -->
-<h2 class="section-title">SPECIAL OFFER</h2>
+<h2 class="section-title">
+    SPECIAL OFFER
+</h2>
 
 <section class="special">
 
     <div class="special-card">
 
-        <div class="special-img">
-            💎
-        </div>
+        <div class="special-img"></div>
 
-        <h3>COMING SOON</h3>
+        <div class="special-name">
+            COMING SOON
+        </div>
 
     </div>
 
@@ -418,56 +690,79 @@ body{
 
 
 <!-- TOPUP -->
-<h2 class="section-title">TOPUP</h2>
+<h2 class="section-title">
+    TOPUP
+</h2>
+
 
 <section class="topup-grid">
 
-    <div class="topup-card">
-        <div class="card-img">
-            <div class="emoji">🎮</div>
+
+    <div class="topup-item">
+
+        <div class="topup-image">
+            <div class="topup-icon">🎮</div>
         </div>
+
         <h3>FF LIKES</h3>
+
     </div>
 
 
-    <div class="topup-card">
-        <div class="card-img">
-            <div class="emoji">💎</div>
+    <div class="topup-item" onclick="openUidTopup()">
+
+        <div class="topup-image">
+            <div class="topup-icon">💎</div>
         </div>
+
         <h3>UID TOPUP (BD)</h3>
+
     </div>
 
 
-    <div class="topup-card">
-        <div class="card-img">
-            <div class="emoji">🎁</div>
+    <div class="topup-item">
+
+        <div class="topup-image">
+            <div class="topup-icon">🎁</div>
         </div>
+
         <h3>WEEKLY/MONTHLY</h3>
+
     </div>
 
 
-    <div class="topup-card">
-        <div class="card-img">
-            <div class="emoji">💎</div>
+    <div class="topup-item">
+
+        <div class="topup-image">
+            <div class="topup-icon">💳</div>
         </div>
+
         <h3>WEEKLY LITE</h3>
+
     </div>
 
 
-    <div class="topup-card">
-        <div class="card-img">
-            <div class="emoji">🎫</div>
+    <div class="topup-item">
+
+        <div class="topup-image">
+            <div class="topup-icon">🎫</div>
         </div>
+
         <h3>LEVEL UP PASS</h3>
+
     </div>
 
 
-    <div class="topup-card">
-        <div class="card-img">
-            <div class="emoji">🐰</div>
+    <div class="topup-item">
+
+        <div class="topup-image">
+            <div class="topup-icon">🐰</div>
         </div>
+
         <h3>INDONESIA SERVER</h3>
+
     </div>
+
 
 </section>
 
@@ -475,27 +770,74 @@ body{
 <!-- BOTTOM NAV -->
 <nav class="bottom-nav">
 
-    <div class="nav-item active">
+    <div class="nav active">
         <span class="nav-icon">⌂</span>
         Home
     </div>
 
-    <div class="nav-item">
-        <span class="nav-icon">▶️</span>
+    <div class="nav">
+        <span class="nav-icon">▶</span>
         Tutorial
     </div>
 
-    <div class="nav-item">
+    <div class="nav">
         <span class="nav-icon">▦</span>
         TopUp
     </div>
 
-    <div class="nav-item">
+    <div class="nav">
         <span class="nav-icon">♧</span>
         Contact Us
     </div>
 
 </nav>
+
+
+<script>
+
+/* SLIDER */
+
+let slides = document.querySelectorAll(".slide");
+let dots = document.querySelectorAll(".dot");
+let current = 0;
+
+function showSlide(index){
+
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+
+}
+
+setInterval(function(){
+
+    current++;
+
+    if(current >= slides.length){
+        current = 0;
+    }
+
+    showSlide(current);
+
+},4000);
+
+
+/* UID TOPUP */
+
+function openUidTopup(){
+
+    alert("UID TOPUP page পরের ধাপে connect করা হবে.");
+
+}
+
+</script>
 
 </body>
 </html>
